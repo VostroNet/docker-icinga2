@@ -59,4 +59,20 @@ expect -re "commands from parent node" {
   send -- "y\r"
 }
 
+expect -re "Local zone name" {
+    send -- "\r"
+}
+expect -re "Parent zone name" {
+    send -- "\r"
+}
+expect -re "Default global zones: global-templates director-global" {
+    send -- "\r"
+}
+expect -re "Do you want to specify additional global zones?" {
+    send -- "\r"
+}
+expect -re "Do you want to disable the inclusion of the conf.d directory" {
+    send -- "\r"
+}
+
 interact
