@@ -125,10 +125,10 @@ run() {
       nohup /init/runtime/zone_watcher.sh > /dev/stdout 2>&1 &
     fi
   fi
-
+  echo $ICINGA2_PARAMS ${ICINGA2_PARAMS}
   /usr/sbin/icinga2 \
     daemon \
-    ${ICINGA2_PARAMS}
+    "$ICINGA2_PARAMS"
 }
 
 run
