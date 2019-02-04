@@ -63,7 +63,7 @@ expect -re "Local zone name" {
     send -- "\r"
 }
 expect -re "Parent zone name" {
-    send -- "\r"
+    send -- "$env(ICINGA2_MASTER)\r"
 }
 expect -re "Default global zones: global-templates director-global" {
     send -- "\r"
